@@ -14,49 +14,145 @@ public class EntrytestApplication {
 		// Scanner scanner = new Scanner(System.in);
 		// System.out.println("Please provide number of rows to print... ");
 		// int myrows = scanner.nextInt();
-		int myrows = 14;
+		int myrows = 30;
 		int espaceMidle = 5;
 		String lineString = "";
-		System.out.println("\nThe star pattern is... ");
-		for (int n = 1; n <= espaceMidle; n++) {
-			
-			for (int m = 1; m <= myrows; m++) {
-				lineString = lineString + " ";
-			}
-			lineString = lineString + "*";
-			//int t = n;
-			for (int t = 1; t <= n; t++) {
-				lineString = lineString + " ";
+
+		for (int z = 0; z <= 4; z++) {
+
+			for (int n = 0; n <= myrows; n++) {
+
+				int kkn = myrows / 2;
+				kkn = kkn - z;
+				int kkp = myrows / 2;
+				kkp = kkp + z;
+
+				if (n == kkp) {
+					lineString = lineString + "*";
+				} else if (n == kkn) {
+					lineString = lineString + "*";
+				} else {
+					lineString = lineString + " ";
+				}
+				/*
+				 * int x = myrows + 5 - n;
+				 * 
+				 * for (int m = 0; m <= x; m++) { lineString = lineString + " "; } lineString =
+				 * lineString + "*"; //int t = n; /*for (int t = 1; t <= n; t++) { lineString =
+				 * lineString + " "; }
+				 * 
+				 * for (int t = 2; t <= n; t++) { lineString = lineString + " "; }
+				 */
+
+				// lineString = lineString + "*";
+
 			}
 
-			for (int t = 2; t <= n; t++) {
-				lineString = lineString + " ";
-			}
-			//lineString = lineString + "*";
-			
-			lineString = lineString + "*";
 			System.out.println(lineString);
 			lineString = "";
-			myrows = myrows - 1;
 		}
-		
-		lineString = "";
-		
-		for (int m = 0; m <= myrows + 1; m++) {
-			
-			lineString = lineString + "*";
-		}
-		
-		System.out.println(lineString);
-		
-		
-		
-		
-		
-		/*for (int n = 1; n <= m; n++) {
-				System.out.print(" ");
-				System.out.print("*");
-			}*/
-	}
 
+		lineString = "";
+		int kkp2 = myrows / 2;
+		for (int m = 0; m <= myrows; m++) {
+
+			if (m < kkp2 - 4) {
+				lineString = lineString + "*";
+			} else if (m > kkp2 + 4) {
+				lineString = lineString + "*";
+			} else {
+				lineString = lineString + " ";
+			}
+
+		}
+
+		System.out.println(lineString);
+
+		int kkb = 1;
+		int kkc = 29;
+		for (int z = 0; z <= 4; z++) {
+
+			lineString = "";
+
+			for (int m = 0; m <= myrows; m++) {
+
+				if (m == kkc) {
+					lineString = lineString + "*";
+				} else if (m == kkb) {
+					lineString = lineString + "*";
+				} else {
+					lineString = lineString + " ";
+				}
+
+			}
+			kkb = kkb + 1;
+			kkc = kkc - 1;
+			System.out.println(lineString);
+		}
+
+		kkb = kkb - 1;
+		kkc = kkc + 1;
+
+		for (int z = 0; z <= 3; z++) {
+
+			lineString = "";
+
+			kkb = kkb - 1;
+			kkc = kkc + 1;
+
+			for (int m = 0; m <= myrows; m++) {
+
+				if (m == kkc) {
+					lineString = lineString + "*";
+				} else if (m == kkb) {
+					lineString = lineString + "*";
+				} else {
+					lineString = lineString + " ";
+				}
+
+			}
+			System.out.println(lineString);
+		}
+
+		lineString = "";
+		// int kkp2 = myrows / 2;
+		for (int m = 0; m <= myrows; m++) {
+
+			if (m < kkp2 - 4) {
+				lineString = lineString + "*";
+			} else if (m > kkp2 + 4) {
+				lineString = lineString + "*";
+			} else {
+				lineString = lineString + " ";
+			}
+
+		}
+
+		System.out.println(lineString);
+
+		lineString = "";
+
+		for (int z = 4; z >= 0; z--) {
+
+			for (int n = 0; n <= myrows; n++) {
+
+				int kkn = myrows / 2;
+				kkn = kkn - z;
+				int kkp = myrows / 2;
+				kkp = kkp + z;
+
+				if (n == kkp) {
+					lineString = lineString + "*";
+				} else if (n == kkn) {
+					lineString = lineString + "*";
+				} else {
+					lineString = lineString + " ";
+				}
+
+			}
+
+			System.out.println(lineString);
+			lineString = "";
+		}
+	}
 }
