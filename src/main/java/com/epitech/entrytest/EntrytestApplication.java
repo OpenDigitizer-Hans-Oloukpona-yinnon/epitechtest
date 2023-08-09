@@ -29,9 +29,12 @@ public class EntrytestApplication {
 				lineString = lineString + " ";
 			}
 
+			for (int t = 2; t <= n; t++) {
+				lineString = lineString + " ";
+			}
 			//lineString = lineString + "*";
 			
-			
+			lineString = lineString + "*";
 			System.out.println(lineString);
 			lineString = "";
 			myrows = myrows - 1;
