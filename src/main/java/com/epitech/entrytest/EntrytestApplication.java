@@ -21,18 +21,15 @@ public class EntrytestApplication {
 		for (int n = 1; n <= espaceMidle; n++) {
 			
 			for (int m = 1; m <= myrows; m++) {
-				lineString = lineString + "_";
+				lineString = lineString + " ";
 			}
 			lineString = lineString + "*";
 			//int t = n;
 			for (int t = 1; t <= n; t++) {
-				lineString = lineString + "_";
+				lineString = lineString + " ";
 			}
 
-			/*for (int t = 1; t <= n; t++) {
-				lineString = lineString + "_";
-			}*/
-			//lineString = lineString + "_";
+			//lineString = lineString + "*";
 			
 			
 			System.out.println(lineString);
